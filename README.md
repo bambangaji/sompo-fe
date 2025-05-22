@@ -4,7 +4,10 @@
 This project is a simple image gallery web application built with **Angular** for the frontend and **Spring Boot** for the backend. Users can upload, view, and delete cat images.
 
 ---
+### intialization
 
+MAKESURE environtment.ts
+apiUrl = url server service backend; 
 ## 📁 Project Structure
 
 ```

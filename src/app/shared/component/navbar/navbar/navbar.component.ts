@@ -45,8 +45,9 @@ export class NavbarComponent {
       this.isLoading = true;
 
       this.apiService.uploadImage(this.selectedFile).subscribe({
-        next: () => {
-          location.reload();
+        next: (response) => {
+          if (response)
+            location.reload();
         },
         error: (err) => {
           this.modalService.showMessage(err.message);

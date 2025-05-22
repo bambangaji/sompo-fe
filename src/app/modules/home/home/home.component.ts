@@ -55,6 +55,7 @@ export class HomeComponent implements OnInit {
       error: (err) => {
         console.error('Error fetching cats:', err);
         this.listCat = [];
+        this.modalService.showMessage(err.message);
       }
     });
   }
@@ -89,7 +90,8 @@ export class HomeComponent implements OnInit {
     this.apiService.deleteImage(this.idDelete).subscribe({
       next: (response) => {
         this.modalService.showMessage(response);
-        location.reload();
+        if (response)
+          location.reload();
       },
       error: (err) => {
         console.error('Error fetching cats:', err);
