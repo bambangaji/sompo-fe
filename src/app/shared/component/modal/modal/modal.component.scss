@@ -1,35 +1,4 @@
-.navbar {
-    background-color: #333;
-    color: white;
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .navbar-brand {
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-  
-  .navbar-links {
-    display: flex;
-    list-style: none;
-    gap: 1rem;
-  }
-  
-  .navbar-links a {
-    color: white;
-    text-decoration: none;
-    padding: 0.5rem;
-    transition: color 0.3s;
-  }
-  
-  .navbar-links a:hover {
-    color: #4CAF50;
-  }
-
-  .modal-backdrop {
+.modal-backdrop {
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
     background: rgba(0, 0, 0, 0.3); /* lighter black overlay */
@@ -56,4 +25,3 @@
       opacity: 1;
     }
   }
-  

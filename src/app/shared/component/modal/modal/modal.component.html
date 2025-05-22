@@ -1,0 +1,14 @@
+<div class="modal-backdrop" *ngIf="show">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Message</h5>
+          <button type="button" class="btn-close" (click)="close()"></button>
+        </div>
+        <div class="modal-body">{{ message }}</div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" (click)="close()">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>

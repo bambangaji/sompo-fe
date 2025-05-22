@@ -1,0 +1,46 @@
+<div class="container py-5">
+    <div class="card shadow-lg p-4">
+      <h2 class="text-center mb-4">🐾 Insert Cat Data</h2>
+  
+      <form (submit)="upload(); $event.preventDefault()">
+        <div class="mb-3">
+          <label class="form-label">Name</label>
+          <input type="text" class="form-control" [(ngModel)]="name" name="name" />
+        </div>
+  
+        <div class="mb-3">
+          <label class="form-label">Width (px)</label>
+          <input type="number" class="form-control" [(ngModel)]="width" name="width" />
+        </div>
+  
+        <div class="mb-3">
+          <label class="form-label">Height (px)</label>
+          <input type="number" class="form-control" [(ngModel)]="height" name="height" />
+        </div>
+  
+        <div class="mb-3">
+          <label class="form-label">URL</label>
+          <input type="text" class="form-control" [(ngModel)]="url" name="url" />
+        </div>
+  
+        <div class="d-grid">
+          <button type="submit" class="btn btn-success" [disabled]="isUploading">
+            <span *ngIf="!isUploading">Upload</span>
+            <span *ngIf="isUploading">
+              <span class="spinner-border spinner-border-sm me-2"></span>
+              Uploading...
+            </span>
+          </button>
+        </div>
+  
+        <div
+          *ngIf="message"
+          class="alert mt-4"
+          [ngClass]="{ 'alert-success': isSuccess, 'alert-danger': !isSuccess }"
+        >
+          {{ message }}
+        </div>
+      </form>
+    </div>
+  </div>
+  
