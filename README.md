@@ -107,4 +107,4 @@ Add a screenshot here once available.
 
 ## 📄 License
 
-MIT © [Your Name]
+MIT © Bambang Aji Pangestu
